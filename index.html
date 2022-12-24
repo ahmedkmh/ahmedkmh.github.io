@@ -1,0 +1,289 @@
+<html>
+<b><font face="arial" size="5" color="white">Website by Ahmed khalid Sec 1B</b></font>
+<meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no;user-scalable=0;"/>
+
+<link rel="icon" type="image/png" sizes="96x96" href="/login-ico.png">
+<head>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<style>
+  @media only screen and (max-width: 768px) {
+    .container {
+      border: none !important;
+      background-color: transparent !important;
+      padding: auto !important;
+      margin:0px;
+      -o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+                }
+                .one {
+                    animation-delay: 0s !important;
+                }
+                label {
+                    animation-delay: 1.2s !important;
+                    color: white;
+                    text-shadow: #000 0px 0px 3px,   #000 0px 0px 3px,   #000 0px 0px 3px,
+             #000 0px 0px 3px,   #000 0px 0px 3px,   #000 0px 0px 1px;
+             -webkit-font-smoothing: antialiased
+                }
+                input.button {
+                    animation-delay: 1.2s !important;
+                }
+                .box {
+                    animation-delay: 1.2s !important;
+                }
+                a.two:link {
+                    animation-delay: 0s !important;
+                    color: #0000ff !important;
+                }
+                a.two:visited {color:#0000ff !important;}
+                body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) !important;
+    background-size: 400% 400% !important;
+    animation: gradient 15s ease infinite !important;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+  }
+  
+  .one {
+  opacity: 0;
+    animation-name: anim2;
+    animation-duration: 2s;
+    animation-delay: 0.8s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes anim2 {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+  label {
+  opacity: 0;
+    animation-name: anim3;
+    animation-duration: 1.6s;
+    animation-delay: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes anim3 {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: sans-serif;
+    border-radius: 30px;
+    background-color: #ededed;
+    padding-left: auto;
+    padding-right: auto;
+    padding-top: auto;
+    padding-bottom: auto;
+    transform: translate(-50%,-50%);
+    border: 3px solid black;
+    animation-name: anim1;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes anim1 {
+  from {padding-left: auto; padding-right: auto; padding-top: auto;
+    padding-bottom: auto;}
+  to {padding-left: 50px;
+    padding-right: 50px; padding-top: 70px;
+    padding-bottom: 70px;}
+}
+
+  .box {
+    border-radius: 30px;
+    padding-left: 3px;
+    border: 2px solid black;
+    font-family: sans-serif;
+    transition: padding-left 0.1s;
+    box-shadow: inset 0px 0px 4px 1px rgb(0, 0, 0, 0.5);
+    opacity: 0;
+    animation-name: anim2;
+    animation-duration: 1.6s;
+    animation-delay: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes anim2 {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+  .box:focus{
+    outline:none;
+    }
+    .box:hover {
+      padding-left: 8px;
+    }
+    input.button {
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid black;
+    font-family: sans-serif;
+    transition: width 0.1s, font-size 0.1s, height 0.1s;
+    opacity: 0;
+    animation-name: anim3;
+    animation-duration: 1.6s;
+    animation-delay: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes anim3 {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+  input.button:focus{
+    outline:none;
+    }
+    input.button:active {
+    box-shadow: inset 0px 0px 5px 2px rgb(0, 0, 0, 0.5);
+    }
+    input.button:hover {
+      font-size: 30px !important;  
+      width: 80px !important;
+      height: 60px !important;  
+    }
+a.two:link {color:#0000ff;  transition: font-size 0.08s;opacity: 0;
+    animation-name: anim3;
+    animation-duration: 1s;
+    animation-delay: 0.8s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes anim3 {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+a.two:visited {color:#0000ff;}
+a.two:hover {font-size:130%;}
+#bloc1
+{
+position: fixed;
+bottom: 10px;
+right: 3px;
+}
+
+.pic {
+  width:70;
+  height:70;
+  transition: width 0.1s, height 0.1s;
+}
+
+.pic:hover {
+  width:83;
+  height:83;
+}
+
+#herf1
+{
+text-decoration:none;
+}
+</style>
+<title>Login</title>
+
+</head>
+<body style="background: linear-gradient(to bottom, #b1cdfa 0%, #7dafff 74%);">
+  <div class="container">
+<font size="5" face="Lucida Sans">
+<center>
+<img src="assets/banner.png" class="one" style="width:300;height:100;"><br>
+<a href="News/" class="two">News</a>
+<a href="Pictures/" class="two">Pictures</a>
+<a href="Videos/" class="two">Videos</a><br><br>
+</font>
+<form name="form1" action="home/" method="get">
+<font size="6" face="sans-serif">
+  <label>Username</label> <input type="text" placeholder="Enter Username" maxlength="13" class="box" name="t1" style="font-size:20px;width:220px;height:35px" required>
+<br><label>Password</label> &nbsp<input type="password" class="box" placeholder="Enter Password" style="font-size:20px;width:220px;height:35px" required><br>
+<label>Language</label>&nbsp
+<select id="cars" placeholder="choose language" name="select" class="box" style="font-size:20px;width:220px;height:35px" required>
+  <option value="Ar">Arabic</option>
+  <option value="Eng">English</option>
+  <option value="Fre">French</option>
+  <option value="Ger">German</option>
+</select><br>
+<br>
+</font>
+<input type="submit" class="button" onclick="prep2 ()" goto="home.html" value="login" style="font-size:20px;color:black;width:60px;height:50px">
+</div>
+<div id=bloc1 dir="rtl"> 
+<a id=herf1 href="mailto: ahmedkmh2145@gmail.com" dir="rtl"> 
+<img class="pic" src="assets/gmail.png"> 
+</a> 
+<a id=herf1 href="https://www.facebook.com/Ahmedkmh2145" dir="rtl"> 
+<img class="pic" src="assets/facebook.png"> 
+</a> 
+<!-- Messenger Chat plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "329331101054433");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v13.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+</form>
+<script>
+function prep2 ()
+{
+if (form1.t1.value !=="")
+{
+alert ("Welcome "+form1.t1.value);
+return false
+}
+}
+</script>
+</center>
+</font>
+</form>
+</body>
+</html>
