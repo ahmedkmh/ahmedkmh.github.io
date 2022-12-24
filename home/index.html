@@ -1,0 +1,108 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<style>
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+a.two:link {color:#0000ff;  transition: font-size 0.08s;}
+a.two:visited {color:#0000ff;}
+a.two:hover {font-size:130%;}
+#bloc1
+{
+position: fixed;
+bottom: 10px;
+right: 3px;
+}
+
+.pic {
+  width:70;
+  height:70;
+  transition: width 0.1s, height 0.1s;
+}
+
+.pic:hover {
+  width:83;
+  height:83;
+}
+
+#herf1
+{
+text-decoration:none;
+}
+</style>
+<title>Home</title>
+<link rel="shotcut icon" type="image/x-icon" href="/home/home-ico.ico">
+</head>
+<body style="background: linear-gradient(to bottom, #b1cdfa 0%, #7dafff 74%);background-attachment: fixed;">
+<font size="5" face="Lucida Sans">
+<div>
+<a href="/" class="two">Log Out</a>
+</div>
+<div class="container">
+<font size="5" face="Lucida Sans">
+<center>
+<img src="banner.png" style="width:300;height:100;"><br>
+<a href="News/" class="two">News</a>
+<a href="Pictures/" class="two">Pictures</a>
+<a href="Videos/" class="two">Videos</a><br><br>
+</font>
+<font size="6" face="Lucida Sans">
+User<br>
+<p id="date"></p>
+</div>
+<div id=bloc1 dir="rtl"> 
+<a id=herf1 href="mailto: ahmedkmh2145@gmail.com" dir="rtl"> 
+<img class="pic" src="../assets/gmail.png"> 
+</a> 
+<a id=herf1 href="https://www.facebook.com/Ahmedkmh2145" dir="rtl"> 
+<img class="pic" src="../assets/facebook.png"> 
+</a>
+<!-- Messenger Chat plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "329331101054433");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v13.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+</div>
+</center>
+</font>
+</form>
+<script>
+var n =  new Date();
+var y = n.getFullYear();
+var m = n.getMonth() + 1;
+var d = n.getDate();
+var h = n.getHours();
+var k = n.getMinutes();
+document.getElementById("date").innerHTML = m + "/" + d + "/" + y + "," + h + ":" + k;
+</script>
+</body>
+</html>
