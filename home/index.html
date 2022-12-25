@@ -38,7 +38,6 @@ text-decoration:none;
 <link rel="shotcut icon" type="image/x-icon" href="/home/home-ico.ico">
 </head>
 <body style="background: linear-gradient(to bottom, #b1cdfa 0%, #7dafff 74%);background-attachment: fixed;">
-<input type="hidden" name="t1" value="">
 <font size="5" face="Lucida Sans">
 <div>
 <a href="../" class="two">Log Out</a>
@@ -51,7 +50,7 @@ text-decoration:none;
 <a href="Pictures/" class="two">Pictures</a>
 <a href="Videos/" class="two">Videos</a><br><br>
 </font>
-<font size="6" face="Lucida Sans">
+<font id="contento" size="6" face="Lucida Sans">
 User<br>
 <p id="date"></p>
 </div>
@@ -97,6 +96,7 @@ User<br>
 </font>
 </form>
 <script>
+document.getElementById("contento").innerHTML = localStorage.getItem('t1');
 var n =  new Date();
 var y = n.getFullYear();
 var m = n.getMonth() + 1;
