@@ -1,0 +1,5 @@
+name: Fetch Data to File
+uses: gautemo/fetch-api-data-action@1.1.0
+with:
+  url: 'https://fake-movie-database-api.herokuapp.com/api?s=batman'
+  file: 'backup/data.json'
