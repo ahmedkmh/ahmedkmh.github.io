@@ -3,6 +3,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <head>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: sans-serif;
     }
@@ -15,11 +18,20 @@
   bottom: 10px;
   right: 3px;
   }
-  
+  #bloc2
+  {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  }
   .pic {
     width:70;
     height:70;
     transition: width 0.1s, height 0.1s;
+    filter: drop-shadow(0px 0px 4px black);
+    padding-left: 0.3em;
+    padding-right: 0.3em;
   }
   
   .pic:hover {
@@ -40,8 +52,10 @@
     border-radius: 13px;
   }
   .line {
-    border-top: 2px solid black;
-    margin: 10px;
+    border-top: 5px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
   }
   .items {
     display: block;
@@ -50,12 +64,46 @@
     border: 1px black solid;
     font-size: 100%;
     padding: 10px;
+    position: relative;
+    background-color: rgba(255, 187, 187, 0.24);
+  }
+  .dato {
+    position: absolute;
+    margin: 2px;
+    font-size: 60%;
+    margin-top: 10px;
+    bottom: 0px;
+    left: 0;
+    height: auto;
+    direction: ltr;
+    font-weight: bold;
   }
   #options1, #options2 {
     width: 100%;
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
+    border: 1px solid black;
+    margin-top: 0;
+    margin-bottom: 10%;
+  }
+  h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .head {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0.4em;
+    padding-bottom: 0.5em;
+    border: 2px solid black;
+    border-bottom: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: rgba(255, 161, 161, 0.39);
   }
   @media only screen and (min-width: 800px) {
   .newsimg {
@@ -71,8 +119,8 @@
 <a href="../" class="two">Go Back</a><br>
 </font>
 <font size="6">
-  <h1>Egypt</h1>
-<p id="options1" dir="rtl">
+  <h1><p id="head1" class="head">Egypt News</p></h1>
+<p id="options1" dir="ltr">
 CAIRO – 4 April 2022: Egypt’s wheat stock for the domestic consumption is sufficient for 2.6 months, amid US expectation of decline the Egyptian wheat imports due to the ongoing Russian-Ukraine conflict.
  
 Chairing the fourth ministerial meeting for the committee that was tasked to follow up the repercussions of the global crisis on the Egyptian strategic commodities, Egyptian Prime Minister Mustafa Madbouli revised the state’s stockpiles of certain basic food commodities, saying that the wheat stock is enough for 2.6 month as this coincides with the start of the wheat harvest season from the local farmers.
@@ -101,7 +149,7 @@ Despite the government’s efforts to secure wheat supply that is essential for 
 
  
 </p>
-<h1>saudia:</h1>
+<h1><p id="head2" class="head">Saudia News</p></h1>
 <p id="options2" dir="ltr">
   CAIRO – 4 April 2022: Egypt’s wheat stock for the domestic consumption is sufficient for 2.6 months, amid US expectation of decline the Egyptian wheat imports due to the ongoing Russian-Ukraine conflict.
    
@@ -131,12 +179,12 @@ Despite the government’s efforts to secure wheat supply that is essential for 
   
    
   </p>
-<div id=bloc1 dir="rtl"> 
-<a id=herf1 href="mailto: ahmedkmh2145@gmail.com" dir="rtl"> 
-<img class="pic" src="../../assets/gmail.png"> 
+<div id=bloc2 dir="ltr"> 
+<a id=herf1 href="#head1" dir="ltr"> 
+<img class="pic" src="https://cdn.countryflags.com/thumbs/egypt/flag-round-250.png"> 
 </a> 
-<a id=herf1 href="https://www.facebook.com/Ahmedkmh2145" dir="rtl"> 
-<img class="pic" src="../../assets/facebook.png"> 
+<a id=herf1 href="#head2" dir="ltr"> 
+<img class="pic" src="https://cdn.countryflags.com/thumbs/saudi-arabia/flag-round-250.png"> 
 </a>
 </div>
 </font>
@@ -152,8 +200,7 @@ Despite the government’s efforts to secure wheat supply that is essential for 
     {
       if (file.source.id != "google-news") {
       i += 1
-      htmlString += `<div class="items" id="item${i}"><img class="newsimg" onerror=this.src="https://archive.org/download/no-photo-available/no-photo-available.png" src="${file.urlToImage}"><a href="${file.url}">${file.title}</a><p>${file.description}</p></div>`;
-    }
+      htmlString += `<div class="items" id="item${i}"><img class="newsimg" onerror=this.src="https://archive.org/download/no-photo-available/no-photo-available.png" src="${file.urlToImage}"><a href="${file.url}">${file.title}</a><p>${file.description}</p><p class="dato">${file.publishedAt.slice(0, -10)} / ${file.publishedAt.slice(11, 19)} GMT</p></div>`;    }
   }
     document.getElementById('options1').innerHTML = htmlString;
   })();
@@ -168,8 +215,7 @@ Despite the government’s efforts to secure wheat supply that is essential for 
     {
       if ((file.source.id != "google-news")&&(file.urlToImage != null)&&(file.source.name != "Malay Mail")&&(file.source.name != "al-jazeera-english")) {
       i += 1
-      htmlString += `<div class="items" id="item${i}"><img class="newsimg" onerror=this.src="https://archive.org/download/no-photo-available/no-photo-available.png" src="${file.urlToImage}"><a href="${file.url}">${file.title}</a><p>${file.description}</p></div>`;
-    }
+      htmlString += `<div class="items" id="item${i}"><img class="newsimg" onerror=this.src="https://archive.org/download/no-photo-available/no-photo-available.png" src="${file.urlToImage}"><a href="${file.url}">${file.title}</a><p>${file.description}</p><p class="dato">${file.publishedAt.slice(0, -10)} / ${file.publishedAt.slice(11, 19)} GMT</p></div>`;    }
   }
     document.getElementById('options2').innerHTML = htmlString;
   })();
