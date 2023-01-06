@@ -24,4 +24,4 @@ sau = json.dumps(sau)
 # opening the file in write only mode
 f = open("assets/EgyptNews.json", "w")
 # f is the File Handler
-f.write(egy)
+f.write(sau)
