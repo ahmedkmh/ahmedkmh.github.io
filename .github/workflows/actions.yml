@@ -27,7 +27,7 @@ jobs:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
         run: python _Tools/egyNews.py
         
-        - name: execute py script # run main.py
+      - name: execute py script # run main.py
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
         run: python _Tools/sauNews.py
