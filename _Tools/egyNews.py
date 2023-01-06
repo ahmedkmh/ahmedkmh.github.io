@@ -3,9 +3,15 @@
 from github import Github
 import requests
 import json
+import os
+
+try:
+    SOME_SECRET = os.environ["SOME_SECRET"]
+except KeyError:
+    SOME_SECRET = "Token not available!"
 
 # To get the apikey, go to newsapi website and make an account
-egypt = "https://newsapi.org/v2/top-headlines?country=eg&apiKey=APIKEY"
+egypt = f"https://newsapi.org/v2/top-headlines?country=eg&apiKey={SOME_SECRET}"
 
 ego = requests.get(egypt)
 
@@ -15,13 +21,7 @@ egy = json.loads(ego.text)
 # Convert dict to string
 egy = json.dumps(egy)
 
-g = Github("GITHUB_TOKEN")
-# or  g = github.Github(login, password)
-
-repo = g.get_user().get_repo("ahmedkmh.github.io")
-file1 = repo.get_contents("assets/EgyptNews.json")
-
-# update
-repo.update_file(file1.path, "updating egypt news", egy, file1.sha)
-
-input("enter")
+# opening the file in write only mode
+f = open("assets/EgyptNews.json", "w")
+# f is the File Handler
+f.write(egy)
