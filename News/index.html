@@ -188,7 +188,7 @@ Despite the government’s efforts to secure wheat supply that is essential for 
 </font>
 <script>
   (async () => {
-    const response = await fetch('../assets/EgyptNews.json');
+    const response = await fetch('/assets/EgyptNews.json');
     const data = await response.json();
     let htmlString = '';
     i = 0;
@@ -204,7 +204,7 @@ Despite the government’s efforts to secure wheat supply that is essential for 
     document.getElementById('options1').innerHTML = htmlString;
   })();
   (async () => {
-    const response = await fetch('../assets/SaudiaNews.json', {cache: "reload"});
+    const response = await fetch('/assets/SaudiaNews.json', {cache: "reload"});
     const data = await response.json();
     let htmlString = '';
     i = 0;
