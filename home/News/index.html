@@ -110,7 +110,7 @@
   }
   </style>
 <title>News</title>
-<link rel="icon" type="image/png" sizes="96x96" href="/home/News/news-ico.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/News/news-ico.png">
 </head>
 <body dir="ltr" style="background: linear-gradient(to bottom, #b1cdfa 0%, #7dafff 74%);background-attachment: fixed;">
 <font size="5">
@@ -188,7 +188,7 @@ Despite the government’s efforts to secure wheat supply that is essential for 
 </font>
 <script>
   (async () => {
-    const response = await fetch('/assets/EgyptNews.json', {cache: "reload"});
+    const response = await fetch('/assets/EgyptNews.json');
     const data = await response.json();
     let htmlString = '';
     i = 0;
@@ -198,7 +198,8 @@ Despite the government’s efforts to secure wheat supply that is essential for 
     {
       if (file.source.id != "google-news") {
       i += 1
-      htmlString += `<div class="items" id="item${i}"><img class="newsimg" onerror=this.src="https://archive.org/download/no-photo-available/no-photo-available.png" src="${file.urlToImage}"><a href="${file.url}">${file.title}</a><p>${file.description}</p><p class="dato">${file.publishedAt.slice(0, -10)} / ${file.publishedAt.slice(11, 19)} GMT</p></div>`;    }
+      htmlString += `<div class="items" id="item${i}"><img class="newsimg" onerror=this.src="https://archive.org/download/no-photo-available/no-photo-available.png" src="${file.urlToImage}"><a href="${file.url}">${file.title}</a><p>${file.description}</p><p class="dato">${file.publishedAt.slice(0, -10)} / ${file.publishedAt.slice(11, 19)} GMT</p></div>`; 
+       }
   }
     document.getElementById('options1').innerHTML = htmlString;
   })();
@@ -213,7 +214,8 @@ Despite the government’s efforts to secure wheat supply that is essential for 
     {
       if ((file.source.id != "google-news")&&(file.urlToImage != null)&&(file.source.name != "Malay Mail")&&(file.source.name != "al-jazeera-english")) {
       i += 1
-      htmlString += `<div class="items" id="item${i}"><img class="newsimg" onerror=this.src="https://archive.org/download/no-photo-available/no-photo-available.png" src="${file.urlToImage}"><a href="${file.url}">${file.title}</a><p>${file.description}</p><p class="dato">${file.publishedAt.slice(0, -10)} / ${file.publishedAt.slice(11, 19)} GMT</p></div>`;    }
+      htmlString += `<div class="items" id="item${i}"><img class="newsimg" onerror=this.src="https://archive.org/download/no-photo-available/no-photo-available.png" src="${file.urlToImage}"><a href="${file.url}">${file.title}</a><p>${file.description}</p><p class="dato">${file.publishedAt.slice(0, -10)} / ${file.publishedAt.slice(11, 19)} GMT</p></div>`;   
+     }
   }
     document.getElementById('options2').innerHTML = htmlString;
   })();
