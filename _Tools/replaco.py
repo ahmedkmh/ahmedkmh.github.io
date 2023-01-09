@@ -1,5 +1,5 @@
-fileos = ["News", "Pictures", "Videos"]
-for name in fileos:
+files = ["News", "Pictures", "Videos"]
+for name in files:
     #input file
     fin = open(f"../{name}/index.html", "rt")
     #output file to write the result to
