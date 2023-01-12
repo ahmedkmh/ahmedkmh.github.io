@@ -224,10 +224,10 @@ text-decoration:none;
 </font>
 <form name="form1" action="home/" method="get">
 <font size="6" face="sans-serif">
-  <label>Username</label> <input type="text" placeholder="Enter Username" maxlength="13" class="box" name="t1" style="font-size:20px;width:220px;height:35px" required>
+  <label>Username</label> <input id="nameo" type="text" placeholder="Enter Username" maxlength="13" class="box" style="font-size:20px;width:220px;height:35px" required>
 <br><label>Password</label> &nbsp<input type="password" class="box" placeholder="Enter Password" style="font-size:20px;width:220px;height:35px" required><br>
 <label>Language</label>&nbsp
-<select id="cars" placeholder="choose language" name="select" class="box" style="font-size:20px;width:220px;height:35px" required>
+<select id="cars" placeholder="choose language" class="box" style="font-size:20px;width:220px;height:35px" required>
   <option value="Ar">Arabic</option>
   <option value="Eng">English</option>
   <option value="Fre">French</option>
@@ -278,10 +278,10 @@ text-decoration:none;
 <script>
 function prep2 ()
 {
-if (form1.t1.value !=="")
+if (document.getElementById("nameo").value !=="")
 {
-localStorage.setItem('t1', form1.t1.value);
-alert ("Welcome "+form1.t1.value);
+localStorage.setItem('t1', document.getElementById("nameo").value);
+alert ("Welcome "+document.getElementById("nameo").value);
 return false
 }
 }
