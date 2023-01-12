@@ -40,7 +40,7 @@ text-decoration:none;
 <body style="background: linear-gradient(to bottom, #b1cdfa 0%, #7dafff 74%);background-attachment: fixed;">
 <font size="5" face="Lucida Sans">
 <div>
-<a href="../" class="two">Log Out</a>
+<a onclick="deleto()" href="../" class="two">Log Out</a>
 </div>
 <div class="container">
 <font size="5" face="Lucida Sans">
@@ -97,6 +97,12 @@ text-decoration:none;
 </font>
 </form>
 <script>
+function deleto() {
+  localStorage.removeItem('t1');
+}
+if (localStorage.getItem('t1') === null) {
+location.replace('../');
+}
 document.getElementById("contento").innerHTML = localStorage.getItem('t1');
 var n =  new Date();
 var y = n.getFullYear();

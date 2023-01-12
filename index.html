@@ -271,6 +271,9 @@ text-decoration:none;
     </script>
 </form>
 <script>
+if (localStorage.getItem('t1') !== null) {
+  location.replace('/home')
+}
 function prep2 ()
 {
 if (form1.t1.value !=="")
