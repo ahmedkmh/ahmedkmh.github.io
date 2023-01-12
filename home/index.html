@@ -1,6 +1,15 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
+  <script>
+    function deleto() {
+      localStorage.removeItem('t1');
+    }
+    if (localStorage.getItem('t1') === null) {
+    location.replace('../');
+    }
+    document.getElementById("contento").innerHTML = localStorage.getItem('t1');
+    </script>
 <style>
 .container {
     position: absolute;
@@ -97,13 +106,6 @@ text-decoration:none;
 </font>
 </form>
 <script>
-function deleto() {
-  localStorage.removeItem('t1');
-}
-if (localStorage.getItem('t1') === null) {
-location.replace('../');
-}
-document.getElementById("contento").innerHTML = localStorage.getItem('t1');
 var n =  new Date();
 var y = n.getFullYear();
 var m = n.getMonth() + 1;

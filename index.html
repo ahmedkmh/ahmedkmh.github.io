@@ -1,5 +1,10 @@
 <html>
 <head>
+<script>
+if (localStorage.getItem('t1') !== null) {
+location.replace('/home')
+}
+</script>
 <meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no;user-scalable=0;"/>
 <style>
   @media only screen and (max-width: 768px) {
@@ -271,9 +276,6 @@ text-decoration:none;
     </script>
 </form>
 <script>
-if (localStorage.getItem('t1') !== null) {
-  location.replace('/home')
-}
 function prep2 ()
 {
 if (form1.t1.value !=="")
