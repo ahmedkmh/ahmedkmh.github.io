@@ -8,7 +8,6 @@
     if (localStorage.getItem('t1') === null) {
     location.replace('../');
     }
-    document.getElementById("contento").innerHTML = localStorage.getItem('t1');
     </script>
 <style>
 .container {
@@ -106,6 +105,7 @@ text-decoration:none;
 </font>
 </form>
 <script>
+document.getElementById("contento").innerHTML = localStorage.getItem('t1');
 var n =  new Date();
 var y = n.getFullYear();
 var m = n.getMonth() + 1;
