@@ -222,7 +222,7 @@ text-decoration:none;
 <a href="Pictures/" class="two">Pictures</a>
 <a href="Videos/" class="two">Videos</a><br><br>
 </font>
-<form name="form1" action="home/" method="get">
+<form name="form1" action="home/" onsubmit="prep2 ()">
 <font size="6" face="sans-serif">
   <label>Username</label> <input id="nameo" type="text" placeholder="Enter Username" maxlength="13" class="box" style="font-size:20px;width:220px;height:35px" required>
 <br><label>Password</label> &nbsp<input type="password" class="box" placeholder="Enter Password" style="font-size:20px;width:220px;height:35px" required><br>
@@ -235,7 +235,7 @@ text-decoration:none;
 </select><br>
 <br>
 </font>
-<input type="submit" class="button" onclick="prep2 ()" goto="home.html" value="login" style="font-size:20px;color:black;width:60px;height:50px">
+<input type="submit" class="button" goto="home.html" value="login" style="font-size:20px;color:black;width:60px;height:50px">
 </div>
 <div id=bloc1 dir="rtl"> 
 <a id=herf1 href="mailto: ahmedkmh2145@gmail.com" dir="rtl"> 
@@ -282,6 +282,7 @@ if (document.getElementById("nameo").value !=="")
 {
 localStorage.setItem('t1', document.getElementById("nameo").value);
 alert ("Welcome "+document.getElementById("nameo").value);
+location.replace('/home');
 return false
 }
 }
