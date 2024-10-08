@@ -25,12 +25,12 @@ jobs:
           
       - name: execute py script # run main.py
         env:
-          SOME_SECRET: ${{ secrets.SOME_SECRET }}
+          SOME_SECRET: ${{ secrets.MEDIASTACK_TOKEN }}
         run: python _Tools/egyNews.py
         
       - name: execute py script # run main.py
         env:
-          SOME_SECRET: ${{ secrets.SOME_SECRET }}
+          SOME_SECRET: ${{ secrets.MEDIASTACK_TOKEN }}
         run: python _Tools/sauNews.py
           
       - name: commit files
