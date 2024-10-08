@@ -6,12 +6,12 @@ import json
 import os
 
 try:
-    SOME_SECRET = os.environ["SOME_SECRET"]
+    SOME_SECRET = os.environ["MEDIASTACK_TOKEN"]
 except KeyError:
     SOME_SECRET = "Token not available!"
 
 # To get the apikey, go to newsapi website and make an account
-egypt = f"https://newsapi.org/v2/top-headlines?country=eg&apiKey={SOME_SECRET}"
+egypt = f"https://newsdata.io/api/1/news?apikey={SOME_SECRET}&country=eg"
 
 ego = requests.get(egypt)
 
