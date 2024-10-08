@@ -12,6 +12,7 @@ except KeyError:
 
 # To get the apikey, go to newsapi website and make an account
 egypt = f"https://newsdata.io/api/1/news?apikey={SOME_SECRET}&country=eg"
+print(egypt[0:44])
 
 ego = requests.get(egypt)
 
