@@ -196,10 +196,8 @@ Despite the government’s efforts to secure wheat supply that is essential for 
     console.log(pros)
     for (let file of pros)
     {
-      if (file.source.id != "google-news") {
       i += 1
       htmlString += `<div class="items" id="item${i}"><img class="newsimg" onerror=this.src="https://archive.org/download/no-photo-available/no-photo-available.png" src="${file.image_url}"><a href="${file.link}">${file.title}</a><p>${file.description}</p><p class="dato">${file.pubdate.slice(0, -10)} / ${file.pubdate.slice(11, 19)} ${file.pubDateTZ}</p></div>`;
-    }
   }
     document.getElementById('options1').innerHTML = htmlString;
   })();
