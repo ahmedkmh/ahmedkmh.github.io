@@ -2,7 +2,7 @@ name: News Updater
 
 on:
   schedule:
-    - cron: '13 12 * * */2' # At 12:13 pm every 2 day
+    - cron: '13 * * * *' # At 12:13 pm every 2 day
   workflow_dispatch:
 
 jobs:
